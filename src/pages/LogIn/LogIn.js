@@ -2,7 +2,9 @@ import {useState} from 'react';
 import Style from './LogIn.module.scss';
 import logo from 'assets/logo.svg';
 import {Link} from "react-router-dom";
+import PasswordVisibilityButton from './components/PasswordVisibilityButton/PasswordVisibilityButton';
 function LogIn() {
+    const [error, setError] = useState('');
     const [passwordVisible, setPasswordVisible] = useState(false);
 
     const changeHandler = (event) => {
@@ -31,8 +33,12 @@ function LogIn() {
                     <label htmlFor="password">Password</label>
                     <div className="password--group">
                         <input type={passwordVisible ? 'text' : 'password'} id="password" onChange={changeHandler}/>
+                        <PasswordVisibilityButton
+                            {...{passwordVisible}}
+                            toggleVisibility={() => setPasswordVisible(!passwordVisible)}
+                        />
                     </div>
-                    {/* <span className="error--container">{error}</span> */}
+                    <span className="error--container">{error}</span>
                 </div>
             </form>
         </div>
