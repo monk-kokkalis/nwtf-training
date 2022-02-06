@@ -1,0 +1,73 @@
+.Main {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 350px;
+    padding: 0 20px;
+
+    img[class~="logo"] {
+        height: 60px;
+        left: -15px;
+        position: relative;
+        width: 60px;
+    }
+
+    h1 {
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 5px;
+
+        a[class~="register--link"] {
+            color: var(--link-color);
+            font-weight: 500;
+            padding-left: 5px;
+        }
+    }
+
+    form {
+        width: 100%;
+        div[class~="input--block"] {
+            margin-top: 20px;
+            font-size: 14px;
+            label {
+                display: block;
+                color: rgba(0, 0, 0, 0.9);
+            }
+            input {
+                background-color: transparent;
+                display: block;
+                margin-top: 6px;
+                padding: 14px 16px;
+                width: 100%;
+                border: 1px solid rgba(0, 0, 0, 0.5);
+                border-radius: 4px;
+            }
+            div[class~="password--group"] {
+                position: relative;
+                button[class~="visibility"] {
+                    position: absolute;
+                    top: 0;
+                    right: 16px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    height: 24px;
+
+                    svg {
+                        color: #607D8B;
+                    }
+                }
+            }
+        }
+    }
+}
