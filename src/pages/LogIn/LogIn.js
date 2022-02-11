@@ -2,7 +2,12 @@ import {useState} from 'react';
 import Style from './LogIn.module.scss';
 import logo from 'assets/logo.svg';
 import {Link} from "react-router-dom";
+// components
 import PasswordVisibilityButton from './components/PasswordVisibilityButton/PasswordVisibilityButton';
+// elements
+import Button from 'elements/Button/Button';
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
 function LogIn() {
     const [error, setError] = useState('');
     const [passwordVisible, setPasswordVisible] = useState(false);
@@ -11,9 +16,8 @@ function LogIn() {
         console.log(event.target.id)
     }
 
-    const submitHandler = async (event) => {
-        event.preventDefault();
-        console.log('sub!')
+    const clickHandler = async () => {
+        setError('Username or password is incorrect')
     }
 
     return (
@@ -24,7 +28,7 @@ function LogIn() {
                 <span>Do you have an account?</span>
                 <Link to="/register" className='register--link'>Sign up</Link>
             </h2>
-            <form onSubmit={submitHandler}>
+            <form>
                 <div className="input--block">
                     <label htmlFor="username">Username</label>
                     <input type="text" id="username" onChange={changeHandler}/>
@@ -40,6 +44,22 @@ function LogIn() {
                     </div>
                     <span className="error--container">{error}</span>
                 </div>
+                <section className="forgot--password">
+                    <FormControlLabel control={<Checkbox />} label="Remember me" />
+                    <Link to="/forgot-password" className='forgot--password'>Forgot password?</Link>
+                </section>
+                <Button
+                    clickHandler={clickHandler}
+                    loading={false}
+                    text="Sign in"
+                    style={{
+                        borderRadius: '100px',
+                        padding: '10px 20px',
+                        textTransform: 'capitalize',
+                        type: 'submit',
+                        width: '100%',
+                    }}
+                />
             </form>
         </div>
     )

@@ -20,12 +20,13 @@
         font-weight: 700;
     }
 
-    h2 {
+    h2, form {
         font-size: 14px;
         font-weight: 400;
         margin-top: 5px;
 
-        a[class~="register--link"] {
+        a[class~=register--link],
+        a[class~=forgot--password] {
             color: var(--link-color);
             font-weight: 500;
             padding-left: 5px;
@@ -67,6 +68,23 @@
                         color: #607D8B;
                     }
                 }
+            }
+            span[class~=error--container] {
+                color: var(--dark-red);
+                font-size: 12px;
+                font-style: italic;
+                min-height: 14px;
+                display: block;
+            }
+        }
+
+        section[class~=forgot--password] {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 0 10px 0;
+            label {
+                font-size: 13px;
             }
         }
     }
