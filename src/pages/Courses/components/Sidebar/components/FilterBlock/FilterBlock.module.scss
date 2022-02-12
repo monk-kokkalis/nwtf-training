@@ -1,0 +1,11 @@
+.Main {
+    div[class~=heading] {
+        font-weight: 600;
+    }
+    
+    section[class~=checkboxes] {
+        display: grid;
+        grid-template-rows: repeat(auto-fill, 35px);
+        margin-top: 15px;
+    }
+}
