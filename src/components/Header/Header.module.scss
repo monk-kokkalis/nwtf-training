@@ -1,0 +1,23 @@
+.Main {
+    align-items: center;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.2);
+    height: var(--sidebar-height);
+    justify-content: space-between;
+    padding: 10px 25px;
+    position: sticky;
+    top: 0px;
+
+    span[class~=organization--name] {
+        color: #1565C0;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    div[class~=links] {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+    }
+}

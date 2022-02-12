@@ -9,9 +9,10 @@ function Button(props) {
 
     return (
         <MaterialButton
+            color={props.color || 'primary'}
             onClick={clickHandler}
             sx={props.style}
-            variant="contained">
+            variant={props.variant || "contained"}>
             {props.text || 'Submit'}
         </MaterialButton>
     )

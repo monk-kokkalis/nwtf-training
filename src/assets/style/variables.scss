@@ -1,6 +1,7 @@
 :root {
     --background-color: #f4f4f4;
     --button-color: #4f46e5;
+    --calculated-height: calc(100vh - var(--sidebar-height));
     --dark-red: #b71c1c;
     --link-color: #6366f1;
     --primary-color: #469BE8;
@@ -8,4 +9,6 @@
     --shadow-type-one: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
         0 8px 10px 1px rgba(0, 0, 0, 0.14),
         0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    --shadow-type-two: 0 0 30px 0 rgba(82, 63, 105, 0.05);
+    --sidebar-height: 70px;
 }

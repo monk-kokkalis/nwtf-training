@@ -1,0 +1,8 @@
+.Main {
+    height: inherit;
+    overflow: auto;
+
+    section[class~=content] {
+        height: var(--calculated-height);
+    }
+}
