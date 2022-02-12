@@ -2,7 +2,7 @@
     height: inherit;
     overflow: auto;
 
-    section[class~=content] {
+    & > section[class~=content] {
         display: grid;
         grid-template-columns: 290px auto;
         height: var(--calculated-height);

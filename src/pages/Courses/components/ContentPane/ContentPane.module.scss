@@ -1,5 +1,11 @@
 .Main {
     height: inherit;
     overflow: auto;
-    padding: 20px;
+    
+    div[class~=cards--grid] {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(auto-fit, 280px);
+        padding: 20px;
+    }
 }
