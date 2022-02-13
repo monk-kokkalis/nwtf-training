@@ -4,6 +4,7 @@ const courses = [
         courses: [
             {
                 name: 'Agro-Entrepreneurship NC II',
+                description: "This qualification consists of competencies that a person must achieve to assess market opportunities, establish farm production plan, handle finances, and market produce.",
                 modules: [
                     {
                         name: 'Introduction to Agro-Entrepreneurship',
@@ -29,6 +30,7 @@ const courses = [
             },
             {
                 name: 'Aquaponic Food Production',
+                description: "Aquaponics is a cooperation between plants and fish and the term originates from the two words aquaculture (the growing of fish in a closed environment) and hydroponics (the growing of plants usually in a soil-less environment).",
                 modules: [
                     {
                         name: 'Introduction to Aquaponic Food Production',
@@ -46,6 +48,7 @@ const courses = [
             },
             {
                 name: 'Organic Agriculture Production NC II',
+                description: "Hi there, Farmer of the Future! Welcome to Organic Agriculture Production NC II. We're so glad to have you on board. Whether you want to grow your own food or you're considering a career in agriculture - you have come to the right place. Watch this video to learn more about this qualification",
                 modules: [
                     {
                         name: 'Introduction to Organic Agriculture',
@@ -71,6 +74,7 @@ const courses = [
             },
             {
                 name: 'Agricultural Crops Production NC II',
+                description: "Qualification consists of competencies that a person must achieve to produce various agricultural crops which include performing nursery operations, planting, caring and maintaining of crops and carrying-out harvest and postharvest operations.",
                 modules: [
                     {
                         name: 'Introduction to Agricultural Crops Production',
@@ -97,10 +101,24 @@ const courses = [
         ]
     },
     {
-        category: 'Automotive'
+        category: 'Automotive',
+        description: " Qualification consists of competencies that a person must achieve to inspect, clean and repair mechanical or electrical parts, components, assemblies and sub-assemblies of light and heavy-duty automotive vehicle with diesel or gas engine in accordance with manufacturer’s specification",
+        courses: [
+            {
+                name: 'Automotive Servicing NC II',
+                description: 'This qualification consists of competencies that a person must achieve to inspect, clean and repair mechanical or electrical parts, components, assemblies and sub-assemblies of light and heavy-duty automotive vehicle with diesel or gas engine in accordance with manufacturer’s specification'
+            }
+        ]
     },
     {
-        category: 'Construction'
+        category: 'Construction',
+        description: "Qualification consists of competencies that a person must achieve that will enable him / her to prepare tools, painting materials and equipment; prepare surfaces (wood, concrete, drywall and metal) for painting and assembling access equipment; and perform painting work.",
+        courses: [
+            {
+                name: 'Painting NC II',
+                description: 'This course is designed to enhance the knowledge, skills, positive attitude and work values of a painter in accordance with international standards. It covers competencies in preparing tools, painting materials and equipment; preparing surface for painting; and performing painting works'
+            }
+        ]
     },
     {
         category: 'Electrical and Electronics',
@@ -132,18 +150,20 @@ const courses = [
             },
             {
                 name: 'Electrical Installation and Maintenance NC II',
+                description: "The Electrical Installation and Maintenance NC II Qualification consists of competencies that a person must achieve to enable him/her to install and maintain electrical wiring, lighting and related equipment.",
                 modules: [
                     {
                         name: 'Solar Night Light Assembly',
                         description: "Solar Night Light Assembly covers knowledge and skills needed to assemble, test, and troubleshoot solar night lamp. This material can also be used to deepen one's understanding on the process and the system used of turning solar energy into consumable energy using solar-powered generation technology. This learning material is a self-paced course."
                     }
                 ]
+            },
+            {
+                name: 'ELECTRONIC PRODUCTS ASSEMBLY AND SERVICING NC II',
+                description: "The ELECTRONIC PRODUCTS ASSEMBLY AND SERVICING NC II Qualification consists of competencies that a person must possess to assemble electronic products, prepare printed circuit boards (PCB) modules and to install and service consumer and industrial electronic products and systems.",
             }
         ]
     },
-    {
-        category: 'Entrepreneurship'
-    },  
     {
         category: 'Health Care',
         courses: [
@@ -171,10 +191,32 @@ const courses = [
         ]
     },
     {
-        category: 'Process Food and Beverages'
+        category: 'Medical',
+        description: "Qualification consists of competencies that a person must achieve to transcribe dictated recordings made by physician and other health care professionals and transcribe them into medical reports.",
+        courses: [
+            {
+                name: "Medical Transcription NC II",
+                description: "This qualification consists of competencies that a person must achieve to transcribe dictated recordings made by physician and other health care professionals and transcribe them into medical reports."
+            },
+            {
+                name: "Medical Coding and Billing NC II",
+                description: "This qualification consists of competencies that a person must achieve to demonstrate a proficiency in assigning diagnostic and procedural code using the ICD-9, CPT manuals and perform tasks associated with billing and reimbursement, including insurance and patient billing, payment processing, and claims review, correction, and appeals."
+            }
+        ]
+    },
+    {
+        category: 'Process Food and Beverages',
+        description: "It also includes competencies of a person in the production line of manufacturing processed food who is responsible for routinary works such as inspection of simple defects of packing materials, seal integrity and correct product label.",
+        courses: [
+            {
+                name: "FOOD AND BEVERAGE SERVICES NC II",
+                description: "This qualification consists of competencies that a person must achieve to provide food and beverage service to guests in various food and beverage service facilities."
+            }
+        ]
     },
     {
         category: 'Tourism',
+        description: "Tourism Promotion Services NC II is a short TESDA course in the Philippines that will train you in boosting the tourism in a certain area by promoting its products and services.",
         courses: [
             {
                 name: 'Preparing Hot Meals (COC1)',
@@ -250,9 +292,6 @@ const courses = [
             }
         ]
     },
-    {
-        category: 'TVET'
-    }
 ]
 
 export default courses;

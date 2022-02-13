@@ -1,6 +1,9 @@
 .Main {
     background-color: #fff;
     border: 0.5px solid rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-rows: 180px auto auto;
+    min-height: 0;
 
     div[class~=image--container] {
         img {
@@ -12,12 +15,14 @@
     & > section[class~=content] {
         color: #424242;
         min-height: 130px;
+        min-height: 0;
         padding: 16px;
 
         div[class~=title] {
             color: #000000;
-            font-size: 18px;
+            font-size: 15px;
             font-weight: 500;
+            min-height: 38px;
         }
 
         div[class~=description] {
@@ -25,7 +30,6 @@
             font-size: 14px;
             line-height: 1.43;
             margin-top: 15px;
-            text-align: justify;
         }
     }
 
