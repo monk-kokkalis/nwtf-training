@@ -1,4 +1,5 @@
 const state = {
-    activeFilters: []
+    activeFilters: [],
+    sidebarVisible: true
 }
 export default state;

@@ -4,11 +4,34 @@
     height: inherit;
     overflow: auto;
     padding: 20px 20px 20px 0;
+    position: relative;
+    transition: left 240ms ease-in-out;
+
+    @media (max-width: 767px) {
+        position: absolute;
+        left: calc(-1 * var(--sidebar-width));
+        z-index: 5;
+
+        &[data-visible=true] {
+            left: 0;
+        }
+    }
+
+    button[class~=hide--filters] {
+        display: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        @media (max-width: 767px) {
+            display: block;
+        }
+    }
 
     section[class~=filters] {
         display: flex;
         flex-direction: column;
         gap: 15px;
         overflow: hidden;
-    } 
+    }
 }

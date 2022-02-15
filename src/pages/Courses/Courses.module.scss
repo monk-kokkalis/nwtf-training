@@ -4,7 +4,12 @@
 
     & > section[class~=content] {
         display: grid;
-        grid-template-columns: 290px auto;
+        grid-template-columns: var(--sidebar-width) auto;
         height: var(--calculated-height);
+        position: relative;
+
+        @media(max-width: 767px) {
+            grid-template-columns: 100%;
+        }
     }
 }

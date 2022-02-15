@@ -2,10 +2,26 @@
     height: inherit;
     overflow: auto;
     padding: 20px;
+    text-align: center;
+    div[class~=controls] {
+        display: none;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+        position: relative;
+        top: -10px;
+
+        @media(max-width: 767px) {
+            display: flex;
+        }
+    }
     
     div[class~=cards--grid] {
         display: grid;
         gap: 15px;
         grid-template-columns: repeat(auto-fit, 280px);
+
+        @media(max-width: 767px) {
+            justify-content: center;
+        }
     }
 }

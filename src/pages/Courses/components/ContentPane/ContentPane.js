@@ -3,10 +3,19 @@ import Style from './ContentPane.module.scss';
 import Card from 'elements/Card/Card';
 import data from 'data/courses';
 // redux
+import actions from 'pages/Courses/context/reducers/filters/actions';
 import {Context} from '../../context/Provider';
+// elements
+// icons
+import {
+    Menu as MenuIcon
+} from '@mui/icons-material';
+// elements
+import IconButton from '@mui/material/IconButton';
 function ContentPane() {
     const context = useContext(Context);
-    const {activeFilters} = context.filterState;
+    const {filterDispatch} = context;
+    const {activeFilters, sidebarVisible} = context.filterState;
     const courses = useMemo(() => {
         const courses = data.map(el => {
             return el.courses?.map(course => {
@@ -33,6 +42,26 @@ function ContentPane() {
 
     return (
         <div className={Style.Main}>
+            <div className="controls">
+                <IconButton
+                    color="primary"
+                    className="show--filters"
+                    aria-label="show filters"
+                    onClick={() => {
+                        if (sidebarVisible) {
+                            filterDispatch({
+                                type: actions.HIDE_FILTERS_SIDEBAR
+                            })
+                        } else {
+                            filterDispatch({
+                                type: actions.SHOW_FILTERS_SIDEBAR
+                            })
+                        }
+                        console.log(sidebarVisible)
+                    }}>
+                    <MenuIcon />
+                </IconButton>
+            </div>
             {
                 courses.length > 0 ? (
                     <div className="cards--grid">
