@@ -3,8 +3,9 @@ import Header from 'components/Header/Header';
 // context
 import Provider, {Context} from './context/Provider';
 // components
-import Sidebar from './components/Sidebar/Sidebar';
+import Sidebar from '../../components/Sidebar/Sidebar';
 import ContentPane from './components/ContentPane/ContentPane';
+import SidebarTemplate from './components/SidebarTemplate/SidebarTemplate';
 // redux
 import actions from './context/reducers/filters/actions';
 function Courses() {
@@ -16,12 +17,13 @@ function Courses() {
                     {context => 
                         <section className="content">
                             <Sidebar
-                                clickCallback={() => {
+                                closeHandler={() => {
                                     context.filterDispatch({
                                         type: actions.HIDE_FILTERS_SIDEBAR
                                     })
                                 }}
                                 visible={context.filterState.sidebarVisible}
+                                template={<SidebarTemplate />}
                             />
                             <ContentPane />
                         </section>

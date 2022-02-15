@@ -1,7 +1,7 @@
 .Main {
     height: inherit;
     overflow: auto;
-    padding: 20px;
+    padding: var(--default-padding);
     text-align: center;
     div[class~=controls] {
         display: none;

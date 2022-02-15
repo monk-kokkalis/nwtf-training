@@ -1,0 +1,8 @@
+.Main {
+    section[class~=filters] {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        overflow: hidden;
+    }
+}

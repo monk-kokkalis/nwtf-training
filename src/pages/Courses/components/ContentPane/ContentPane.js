@@ -57,7 +57,6 @@ function ContentPane() {
                                 type: actions.SHOW_FILTERS_SIDEBAR
                             })
                         }
-                        console.log(sidebarVisible)
                     }}>
                     <MenuIcon />
                 </IconButton>
