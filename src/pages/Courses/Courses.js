@@ -1,8 +1,8 @@
 import Style from './Courses.module.scss';
-import Header from 'components/Header/Header';
 // context
 import Provider, {Context} from './context/Provider';
 // components
+import Header from 'components/Header/Header';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import ContentPane from './components/ContentPane/ContentPane';
 import SidebarTemplate from './components/SidebarTemplate/SidebarTemplate';
