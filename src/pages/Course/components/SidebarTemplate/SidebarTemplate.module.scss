@@ -1,3 +1,10 @@
 .Main {
-    // margin-left: 20px;
+    div[class~=videos] {
+        padding: 0px 6px;
+
+        button[class~=MuiButton-textPrimary] {
+            color: rgba(0, 0, 0, 0.9);
+            justify-content: flex-start;
+        }
+    }
 }
