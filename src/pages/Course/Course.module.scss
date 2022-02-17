@@ -1,5 +1,10 @@
+@use 'assets/style/mixins.scss';
 .Main {
-    & > section[class~=video] {
+    height: inherit;
+    & > section[class~=content] {
+        @include mixins.with-sidebar;
+    }
+    section[class~=video] {
         padding: var(--default-padding);
         margin-top: 10px;
     }

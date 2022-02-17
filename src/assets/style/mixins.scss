@@ -1,0 +1,10 @@
+@mixin with-sidebar {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) auto;
+    height: var(--calculated-height);
+    position: relative;
+
+    @media(max-width: 767px) {
+        grid-template-columns: 100%;
+    }
+}

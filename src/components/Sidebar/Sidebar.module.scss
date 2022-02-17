@@ -3,9 +3,9 @@
     box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.2);
     height: inherit;
     overflow: auto;
-    padding: 20px 20px 20px 0;
     position: relative;
     transition: left 240ms ease-in-out;
+    width: var(--sidebar-width);
 
     @media (max-width: 767px) {
         position: absolute;
