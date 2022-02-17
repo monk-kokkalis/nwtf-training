@@ -12,10 +12,14 @@ import {
 } from '@mui/icons-material';
 // elements
 import IconButton from '@mui/material/IconButton';
+// router
+import {useNavigate} from 'react-router-dom';
 function ContentPane() {
     const context = useContext(Context);
     const {filterDispatch} = context;
     const {activeFilters, sidebarVisible} = context.filterState;
+    // router
+    const navigate = useNavigate();
     const courses = useMemo(() => {
         const courses = data.map(el => {
             return el.courses?.map(course => {
@@ -66,6 +70,9 @@ function ContentPane() {
                     <div className="cards--grid">
                         {courses.map(({name}, key) => 
                             <Card
+                                clickHandler={() => {
+                                    navigate('/course')
+                                }}
                                 title={name}
                                 index={key}
                                 {...{key}}

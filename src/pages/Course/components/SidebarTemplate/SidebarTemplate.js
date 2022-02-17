@@ -57,7 +57,7 @@ function SidebarTemplate() {
                 summary="First Module Title"
                 details={firstModTemplate}
             />
-            <Accordion summary="Second Module" />
+            <Accordion summary="Second Module" disabled={true} />
         </div>
     )
 }

@@ -8,7 +8,11 @@ import PasswordVisibilityButton from './components/PasswordVisibilityButton/Pass
 import Button from 'elements/Button/Button';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
+// router
+import {useNavigate} from 'react-router-dom';
 function LogIn() {
+    // router
+    const navigate = useNavigate();
     const [error, setError] = useState('');
     const [passwordVisible, setPasswordVisible] = useState(false);
 
@@ -17,7 +21,11 @@ function LogIn() {
     }
 
     const clickHandler = async () => {
-        setError('Username or password is incorrect')
+        if (!passwordVisible) {
+            setError('Username or password is incorrect');
+        } else {
+            navigate('/courses');
+        }
     }
 
     return (

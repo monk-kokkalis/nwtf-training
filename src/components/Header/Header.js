@@ -6,7 +6,10 @@ import {
 // elements
 import Button from 'elements/Button/Button';
 import IconButton from '@mui/material/IconButton';
+// router
+import {useNavigate} from 'react-router-dom';
 function Header() {
+    const navigate = useNavigate();
     return (
         <header className={Style.Main}>
             <span className="organization--name">NWTF</span>
@@ -16,7 +19,11 @@ function Header() {
                     aria-label="shopping" sx={{marginRight: '10px'}}>
                     <ShoppingCartIcon />
                 </IconButton>
-                <Button variant="outlined" text="Log in" />
+                <Button
+                    variant="outlined"
+                    text="Log in"
+                    clickHandler={() => navigate('/login')} 
+                />
                 <Button text="Sign up" />
             </div>
         </header>

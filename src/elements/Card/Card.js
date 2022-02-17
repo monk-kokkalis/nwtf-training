@@ -1,7 +1,7 @@
 import Style from './Card.module.scss';
-function Card({title, index}) {
+function Card({title, index, clickHandler}) {
     return (
-        <div className={Style.Main}>
+        <div className={Style.Main} onClick={clickHandler}>
             <div className="image--container">
                 <img src={`https://unsplash.it/640/42${index}`} alt="Course" />
             </div>
