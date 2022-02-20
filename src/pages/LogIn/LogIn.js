@@ -33,7 +33,7 @@ function LogIn() {
             <img src={logo} className="logo" alt="logo" />
             <h1>Sign in</h1>
             <h2>
-                <span>Do you have an account?</span>
+                <span>Don't have an account?</span>
                 <Link to="/register" className='register--link'>Sign up</Link>
             </h2>
             <form>

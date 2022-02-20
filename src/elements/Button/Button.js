@@ -10,6 +10,7 @@ function Button(props) {
     return (
         <MaterialButton
             color={props.color || 'primary'}
+            disabled={props.disabled || false}
             fullWidth={props.fullWidth || false}
             onClick={clickHandler}
             sx={props.style}

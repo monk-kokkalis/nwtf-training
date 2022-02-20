@@ -3,6 +3,7 @@ import Style from './Header.module.scss';
 import {
     ShoppingCart as ShoppingCartIcon
 } from '@mui/icons-material';
+
 // elements
 import Button from 'elements/Button/Button';
 import IconButton from '@mui/material/IconButton';
