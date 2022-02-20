@@ -1,0 +1,18 @@
+.Main {
+    width: 100%;
+
+    & > section[class~=content] {
+        margin-top: 10px;
+        min-height: 200px;
+        overflow: hidden;
+        padding: 10px 0;
+        position: relative;
+    }
+
+    & > section[class~=navigation] {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+}
