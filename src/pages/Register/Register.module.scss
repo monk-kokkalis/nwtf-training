@@ -1,0 +1,10 @@
+@use 'assets/style/mixins.scss';
+.Main {
+   @include mixins.authentication;
+   max-width: 500px;
+
+   & > section[class~=wizard] {
+       margin-top: 40px;
+       width: 100%;
+   }
+}
