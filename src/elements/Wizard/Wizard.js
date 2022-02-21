@@ -41,7 +41,7 @@ function Wizard({steps, content}) {
                         <div style={{minHeight: '150px', position: 'absolute', width: '100%'}}>
                             {element}
                         </div>
-                    </Slide>            
+                    </Slide>
                 ))}
             </section>
             <section className="navigation">

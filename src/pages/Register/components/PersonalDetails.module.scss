@@ -26,4 +26,16 @@
             flex: 0 1 32.5%;
         }
     }
+
+    div[class~=gender--radio--group] {
+        label[class~=flex--item] {
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            display: flex;
+            flex: 0 1 49.3%;
+            justify-content: space-between;
+            margin: 0;
+            padding-left: 14px;
+        }
+    }
 }

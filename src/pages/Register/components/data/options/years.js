@@ -1,6 +1,8 @@
 const years = [];
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
 
-for (let number = 2000; number <= 2020; number++) {
+for (let number = currentYear - 70; number <= currentYear; number++) {
     years.push({label: number, value: number})
 }
 

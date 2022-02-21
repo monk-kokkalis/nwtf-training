@@ -3,9 +3,9 @@
 
     & > section[class~=content] {
         margin-top: 10px;
-        min-height: 200px;
-        overflow: hidden;
-        padding: 10px 0;
+        min-height: 202px;
+        overflow-x: hidden;
+        overflow-y: initial;
         position: relative;
     }
 

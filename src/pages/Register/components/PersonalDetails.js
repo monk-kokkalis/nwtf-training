@@ -5,6 +5,12 @@ import Select from 'elements/Select/Select';
 import months from './data/options/months';
 import days from './data/options/days';
 import years from './data/options/years';
+// meterial
+import {
+    FormControlLabel,
+    Radio,
+    RadioGroup
+} from '@mui/material';
 
 function PersonalDetails() {
     return (
@@ -42,6 +48,27 @@ function PersonalDetails() {
                         />
                     </div>
                 </section>
+            </div>
+            <div className="gender">
+                <div className="heading">Gender</div>
+                <RadioGroup
+                    defaultValue="male"
+                    name="gender-radio-buttons-group"
+                    row
+                    className="gender--radio--group flex">
+                    <FormControlLabel
+                        value="male"
+                        control={<Radio />}
+                        label="Male"
+                        className='flex--item'
+                        labelPlacement='start' />
+                    <FormControlLabel
+                        value="female"
+                        control={<Radio />}
+                        label="Female" 
+                        className='flex--item'
+                        labelPlacement='start' />
+                </RadioGroup>
             </div>
         </div>
     )
