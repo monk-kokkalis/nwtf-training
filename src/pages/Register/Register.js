@@ -30,7 +30,8 @@ function Register() {
                             <PersonalDetails />,
                             <Security />,
                             <Address />,
-                            <Contact />
+                            <Contact />,
+                            <div>Done! Please wait</div>
                         ]
                     }
                     minHeight="240px"

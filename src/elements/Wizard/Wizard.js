@@ -54,7 +54,7 @@ function Wizard({steps, content, minHeight}) {
                 <Button
                     clickHandler={next}
                     disabled={activeStep === steps.length}
-                    text="Next"
+                    text={activeStep >= steps.length - 1 ? "Submit" : "Next"}
                     variant="text"
                 />
             </section>
