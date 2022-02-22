@@ -6,6 +6,9 @@ function Security() {
             <div className="password">
                 <PasswordInput label="Password" />
             </div>
+            <div className="confirm--password">
+                <PasswordInput label="Password confirmation" />
+            </div>
         </div>
     )
 }
