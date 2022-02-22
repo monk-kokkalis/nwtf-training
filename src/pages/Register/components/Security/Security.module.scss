@@ -1,3 +1,8 @@
+@use '../../mixins.scss';
 .Main {
-    
+    @include mixins.column-flex;
+
+    div[class~=flex--item] {
+        flex: 0 1 100%;
+    }
 }
