@@ -2,9 +2,9 @@ import Style from './PersonalDetails.module.scss';
 import TextField from 'elements/TextField/TextField';
 import Select from 'elements/Select/Select';
 // data
-import months from './data/options/months';
-import days from './data/options/days';
-import years from './data/options/years';
+import months from '../../data/options/months';
+import days from '../../data/options/days';
+import years from '../../data/options/years';
 // meterial
 import {
     FormControlLabel,

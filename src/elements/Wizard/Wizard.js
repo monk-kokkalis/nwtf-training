@@ -9,8 +9,8 @@ import {
 // elements
 import Button from 'elements/Button/Button';
 
-function Wizard({steps, content}) {
-    const [activeStep, setActiveStep] = useState(0);
+function Wizard({steps, content, minHeight}) {
+    const [activeStep, setActiveStep] = useState(2);
 
     const next = () => {
         setActiveStep(activeStep + 1)
@@ -29,7 +29,7 @@ function Wizard({steps, content}) {
                     </Step>
                 ))}
             </Stepper>
-            <section className="content">
+            <section className="content" style={{minHeight}}>
                 {content.map((element, index) => (
                     <Slide
                         key={index}
@@ -38,7 +38,7 @@ function Wizard({steps, content}) {
                         in={index === activeStep}
                         mountOnEnter
                         unmountOnExit>
-                        <div style={{minHeight: '150px', position: 'absolute', width: '100%'}}>
+                        <div style={{position: 'absolute', width: '100%'}}>
                             {element}
                         </div>
                     </Slide>

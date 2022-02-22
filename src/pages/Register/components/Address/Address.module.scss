@@ -1,0 +1,17 @@
+@use 'assets/style/mixins.scss';
+.Main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    div[class~=flex],
+    section[class~=flex]{
+        @include mixins.flex-container;
+    }
+
+    & > div[class~=city] {
+        div[class~=flex--item] {
+            flex: 0 1 49.3%;
+        }
+    }
+}

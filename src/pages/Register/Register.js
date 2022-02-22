@@ -2,7 +2,9 @@ import Style from './Register.module.scss';
 import {Link} from "react-router-dom";
 import logo from 'assets/logo.svg';
 // content
-import PersonalDetails from './components/PersonalDetails';
+import PersonalDetails from './components/PersonalDetails/PersonalDetails';
+import Address from './components/Address/Address';
+import Contact from './components/Contact/Contact';
 // elements
 import Wizard from 'elements/Wizard/Wizard';
 function Register() {
@@ -24,10 +26,11 @@ function Register() {
                     content={
                         [
                             <PersonalDetails />,
-                            <div>fat second</div>,
-                            <div>fat third</div>
+                            <Address />,
+                            <Contact />
                         ]
                     }
+                    minHeight="240px"
                 />
             </section>
         </div>
