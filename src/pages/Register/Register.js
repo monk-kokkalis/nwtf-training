@@ -5,6 +5,7 @@ import logo from 'assets/logo.svg';
 import PersonalDetails from './components/PersonalDetails/PersonalDetails';
 import Address from './components/Address/Address';
 import Contact from './components/Contact/Contact';
+import Security from './components/Security/Security';
 // elements
 import Wizard from 'elements/Wizard/Wizard';
 function Register() {
@@ -20,12 +21,14 @@ function Register() {
                 <Wizard
                     steps={[
                         'Personal details',
+                        'Security',
                         'Address',
                         'Contact'
                     ]}
                     content={
                         [
                             <PersonalDetails />,
+                            <Security />,
                             <Address />,
                             <Contact />
                         ]

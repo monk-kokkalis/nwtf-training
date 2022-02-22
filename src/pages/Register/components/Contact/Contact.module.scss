@@ -1,5 +1,4 @@
+@use '../../mixins.scss';
 .Main {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    @include mixins.column-flex;
 }

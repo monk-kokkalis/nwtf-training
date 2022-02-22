@@ -10,7 +10,7 @@ import {
 import Button from 'elements/Button/Button';
 
 function Wizard({steps, content, minHeight}) {
-    const [activeStep, setActiveStep] = useState(2);
+    const [activeStep, setActiveStep] = useState(1);
 
     const next = () => {
         setActiveStep(activeStep + 1)
