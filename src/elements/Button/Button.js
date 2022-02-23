@@ -1,4 +1,5 @@
 import MaterialButton from '@mui/material/Button';
+import LoadingButton from '@mui/lab/LoadingButton';
 
 function Button(props) {
     const clickHandler = () => {
@@ -8,6 +9,9 @@ function Button(props) {
     }
 
     return (
+        props.loading ? 
+        <LoadingButton loading variant="contained">Submit</LoadingButton>
+        :
         <MaterialButton
             color={props.color || 'primary'}
             disabled={props.disabled || false}

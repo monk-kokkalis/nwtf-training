@@ -25,7 +25,10 @@ function Header() {
                     text="Log in"
                     clickHandler={() => navigate('/login')} 
                 />
-                <Button text="Sign up" />
+                <Button
+                    text="Sign up"
+                    clickHandler={() => navigate('/register')} 
+                />
             </div>
         </header>
     )

@@ -6,6 +6,7 @@ import PersonalDetails from './components/PersonalDetails/PersonalDetails';
 import Address from './components/Address/Address';
 import Contact from './components/Contact/Contact';
 import Security from './components/Security/Security';
+import Done from './components/Done/Done';
 // elements
 import Wizard from 'elements/Wizard/Wizard';
 function Register() {
@@ -31,7 +32,7 @@ function Register() {
                             <Security />,
                             <Address />,
                             <Contact />,
-                            <div>Done! Please wait</div>
+                            <Done />
                         ]
                     }
                     minHeight="240px"
