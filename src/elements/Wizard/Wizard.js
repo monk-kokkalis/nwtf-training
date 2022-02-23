@@ -38,7 +38,7 @@ function Wizard({steps, content, minHeight}) {
                         in={index === activeStep}
                         mountOnEnter
                         unmountOnExit>
-                        <div style={{position: 'absolute', width: '100%'}}>
+                        <div style={{position: 'absolute', width: '100%', minHeight}}>
                             {element}
                         </div>
                     </Slide>
@@ -54,6 +54,7 @@ function Wizard({steps, content, minHeight}) {
                 <Button
                     clickHandler={next}
                     disabled={activeStep === steps.length}
+                    loading={activeStep >= steps.length}
                     text={activeStep >= steps.length - 1 ? "Submit" : "Next"}
                     variant="text"
                 />
