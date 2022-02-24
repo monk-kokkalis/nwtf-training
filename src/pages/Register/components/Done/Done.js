@@ -1,3 +1,4 @@
+import {useEffect} from 'react';
 import Style from './Done.module.scss';
 import {
     CheckCircleOutlined as CheckCircleOutlinedIcon
@@ -5,6 +6,10 @@ import {
 import EllipsisLoader from 'elements/EllipsisLoader/EllipsisLoader';
 
 function Done() {
+    useEffect(() => {
+        console.log('use effect');
+    }, [])
+
     return (
         <div className={Style.Main}>
             <CheckCircleOutlinedIcon fontSize="large" />
