@@ -25,6 +25,7 @@ function Select(props) {
                         }
                     }
                 }}
+                name={props.name}
                 onChange={props.onChange}
                 value={props.value}>
                 {props.options?.map((op, index) => (

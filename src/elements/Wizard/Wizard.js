@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useCallback, useState} from 'react';
 import Style from './Wizard.module.scss';
 import {
     Slide,
@@ -9,8 +9,17 @@ import {
 // elements
 import Button from 'elements/Button/Button';
 
-function Wizard({steps, content, minHeight}) {
-    const [activeStep, setActiveStep] = useState(1);
+function Wizard({steps, content}) {
+    const [activeStep, setActiveStep] = useState(0);
+    const [minHeight, setMinHeight] = useState(100);
+
+    const slideRef = useCallback(node => {
+        const nodeHeight = node?.getBoundingClientRect().height;
+        if (nodeHeight > minHeight) {
+            // the 20 offset is for the content section padding
+            setMinHeight(nodeHeight + 20);
+        }
+    }, [minHeight])
 
     const next = () => {
         setActiveStep(activeStep + 1)
@@ -32,12 +41,11 @@ function Wizard({steps, content, minHeight}) {
             <section className="content" style={{minHeight}}>
                 {content.map((element, index) => (
                     <Slide
+                        ref={slideRef}
                         key={index}
                         appear={index !== 0}
                         direction="left"
-                        in={index === activeStep}
-                        mountOnEnter
-                        unmountOnExit>
+                        in={index === activeStep}>
                         <div style={{position: 'absolute', width: '100%', minHeight}}>
                             {element}
                         </div>

@@ -5,8 +5,11 @@ function TextField(props) {
         <MaterialTextField
             fullWidth={true}
             label={props.label || 'Label'}
+            name={props.name}
+            onChange={props.onChange}
             variant={props.variant || "outlined"}
             size={props.size || "small"}
+            value={props.value}
         />
     )
 }

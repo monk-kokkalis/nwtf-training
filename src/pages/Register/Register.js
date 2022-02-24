@@ -9,6 +9,8 @@ import Security from './components/Security/Security';
 import Done from './components/Done/Done';
 // elements
 import Wizard from 'elements/Wizard/Wizard';
+// context
+import Provider from './context/Provider';
 function Register() {
     return (
         <div className={Style.Main}>
@@ -19,24 +21,25 @@ function Register() {
                 <Link to="/login" className='login--link'>Sign in</Link>
             </h2>
             <section className="wizard">
-                <Wizard
-                    steps={[
-                        'Personal details',
-                        'Security',
-                        'Address',
-                        'Contact'
-                    ]}
-                    content={
-                        [
-                            <PersonalDetails />,
-                            <Security />,
-                            <Address />,
-                            <Contact />,
-                            <Done />
-                        ]
-                    }
-                    minHeight="240px"
-                />
+                <Provider>
+                    <Wizard
+                        steps={[
+                            'Personal details',
+                            'Security',
+                            'Address',
+                            'Contact'
+                        ]}
+                        content={
+                            [
+                                <PersonalDetails />,
+                                <Security />,
+                                <Address />,
+                                <Contact />,
+                                <Done />
+                            ]
+                        }
+                    />
+                </Provider>
             </section>
         </div>
     )
