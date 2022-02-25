@@ -16,7 +16,8 @@ function StatusButton() {
     return (
         <IconButton
             onClick={() => setChecked(!checked)}
-            color="primary">
+            color="primary"
+            size="small">
             {checked ? <CheckIcon style={checkStyle} /> : <CircleOutlinedIcon style={iconStyle} />}
         </IconButton>
     )

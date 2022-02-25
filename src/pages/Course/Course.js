@@ -6,6 +6,10 @@ import actions from './context/reducers/modules/actions';
 import Header from 'components/Header/Header';
 import Sidebar from 'components/Sidebar/Sidebar';
 import SidebarTemplate from './components/SidebarTemplate/SidebarTemplate';
+import VideoSection from './components/VideoSection/VideoSection';
+import QuizSection from './components/QuizSection/QuizSection';
+// router
+import {Routes, Route} from 'react-router-dom';
 function Course() {
     return (
         <div className={Style.Main}>
@@ -23,11 +27,11 @@ function Course() {
                                 visible={context.moduleState.sidebarVisible}
                                 template={<SidebarTemplate />}
                             />
-                            <section className="video">
-                                <video width="100%" height="400px" controls key={context.moduleState.currentVideo}>
-                                    <source src={context.moduleState.currentVideo} type="video/mp4" />
-                                </video>
-                            </section>
+                            <Routes>
+                                <Route index element={<VideoSection />} />
+                                <Route path="/video" element={<VideoSection />} />
+                                <Route path="/quiz" element={<QuizSection />} />
+                            </Routes>
                         </section>
                     }
                 </Context.Consumer>

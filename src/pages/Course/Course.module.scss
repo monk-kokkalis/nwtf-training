@@ -4,12 +4,4 @@
     & > section[class~=content] {
         @include mixins.with-sidebar;
     }
-    section[class~=video] {
-        padding: var(--default-padding);
-        margin-top: 10px;
-
-        button {
-            padding: 20px;
-        }
-    }
 }

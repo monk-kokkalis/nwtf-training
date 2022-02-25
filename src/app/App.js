@@ -10,7 +10,7 @@ function App() {
         <div className={Style.Main}>
             <Routes>
                 <Route path="/" element={<Register />}/>
-                <Route path="/course" element={<Course />}/>
+                <Route path="/course/*" element={<Course />}/>
                 <Route path="/courses" element={<Courses />}/>
                 <Route path="/login" element={<LogIn />}/>
                 <Route path="/register" element={<Register />}/>
