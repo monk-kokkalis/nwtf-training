@@ -9,12 +9,17 @@ function Accordion({summary, details, disabled}) {
         fontSize: '17px',
         fontWeight: 500
     };
+    const summaryStyle = {
+        padding: '0 20px',
+        fontSize: '15px',
+        fontWeight: '400'
+    }
     const detailsStyle = {
         padding: '0 16px 16px 16px'
     }
     return (
         <MaterialAccordion square={true} sx={accordionStyle} disabled={disabled || false}>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{padding: '0 20px'}}>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={summaryStyle}>
                 {summary}
             </AccordionSummary>
             <AccordionDetails sx={detailsStyle}>
