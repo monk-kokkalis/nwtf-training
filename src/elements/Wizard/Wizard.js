@@ -9,7 +9,7 @@ import {
 // elements
 import Button from 'elements/Button/Button';
 
-function Wizard({steps, content}) {
+function Wizard({steps, content, submitCallback}) {
     const [activeStep, setActiveStep] = useState(0);
     const [minHeight, setMinHeight] = useState(100);
 
@@ -22,7 +22,10 @@ function Wizard({steps, content}) {
     }, [minHeight])
 
     const next = () => {
-        setActiveStep(activeStep + 1)
+        setActiveStep(activeStep + 1);
+        if ((activeStep + 1) === steps.length) {
+            submitCallback();
+        }
     }
 
     const back = () => {

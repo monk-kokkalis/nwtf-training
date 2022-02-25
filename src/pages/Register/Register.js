@@ -11,7 +11,10 @@ import Done from './components/Done/Done';
 import Wizard from 'elements/Wizard/Wizard';
 // context
 import Provider from './context/Provider';
+// router
+import {useNavigate} from 'react-router-dom';
 function Register() {
+    const navigate = useNavigate();
     return (
         <div className={Style.Main}>
             <img src={logo} className="logo" alt="logo" />
@@ -38,6 +41,11 @@ function Register() {
                                 <Done />
                             ]
                         }
+                        submitCallback={() => {
+                            setTimeout(() => {
+                                navigate('/courses')
+                            }, 2000);
+                        }}
                     />
                 </Provider>
             </section>
