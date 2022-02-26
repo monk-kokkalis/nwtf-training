@@ -1,0 +1,15 @@
+.Main {
+    display: grid;
+    grid-template-rows: 80% 20%;
+    height: 100%;
+    
+    & > section[class~=content] {
+        background-color: #fff;
+        padding: 25px 35px;
+    }
+
+    div[class~=MuiPaper-root] {
+        margin: 0 auto;
+        width: 100%;
+    }
+}

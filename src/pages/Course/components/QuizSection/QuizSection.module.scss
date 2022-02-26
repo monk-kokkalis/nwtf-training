@@ -1,4 +1,8 @@
 .Main {
     padding: var(--default-padding);
-    margin-top: 10px;
+
+    & > div[class~=content] {
+        background-color: #fff;
+        height: 100%;
+    }
 }

@@ -1,0 +1,5 @@
+.Main {
+    & > section[class~=questions] {
+        margin-top: 15px;
+    }
+}
