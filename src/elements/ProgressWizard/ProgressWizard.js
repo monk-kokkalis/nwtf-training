@@ -6,7 +6,7 @@ import {
     KeyboardArrowRight as KeyboardArrowRightIcon
 } from '@mui/icons-material';
 
-function ProgressWizard({content}) {
+function ProgressWizard({content, doneTemplate}) {
     const [activeStep, setActiveStep] = useState(0);
 
     const handleNext = () => {
@@ -20,7 +20,7 @@ function ProgressWizard({content}) {
     return (
         <div className={Style.Main}>
             <section className="content">
-                {content.map((el, index) => (
+                {[...content, doneTemplate].map((el, index) => (
                     <div
                         key={index}
                         style={{display: index === activeStep ? 'block' : 'none'}}>
@@ -30,7 +30,7 @@ function ProgressWizard({content}) {
             </section>
             <MobileStepper
                 variant="progress"
-                steps={content.length}
+                steps={content.length + 1}
                 position="static"
                 activeStep={activeStep}
                 sx={{maxWidth: 700, flexGrow: 1, margin: '0 auto'}}
