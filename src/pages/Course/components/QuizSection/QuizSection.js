@@ -5,15 +5,20 @@ import ProgressWizard from 'elements/ProgressWizard/ProgressWizard';
 import quiz from 'data/quiz';
 // auxiliary
 import createQuestions from './auxiliary/create-questions';
+// components
+import DoneTemplate from './components/DoneTemplate/DoneTemplate';
+// context
+import Provider from './context/Provider';
 function QuizSection() {
     const content = createQuestions({questions: quiz});
-    const doneTemplate = <div>Finished the test!</div>
     return (
-        <section className={Style.Main}>
-            <div className="content">
-                <ProgressWizard {...{content, doneTemplate}} />
-            </div>
-        </section>
+        <Provider>
+            <section className={Style.Main}>
+                <div className="content">
+                    <ProgressWizard {...{content, doneTemplate: <DoneTemplate />}} />
+                </div>
+            </section>
+        </Provider>
     )
 }
 
