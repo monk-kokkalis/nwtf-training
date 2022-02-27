@@ -8,10 +8,13 @@ import {
 // context
 import actions from '../../context/actions';
 import {Context} from '../../context/Provider';
+// hooks
+import useAnswer from '../../hooks/use-answer';
 function MultipleChoice({questionItem, index}) {
     const context = useContext(Context);
-    const {quizDispatch} = context;
+    const {quizState, quizDispatch} = context;
     const {options, question} = questionItem;
+    const answer = useAnswer({answers: quizState.answers, index});
 
     const onChange = (event) => {
         const {value} = event.target;
@@ -22,13 +25,14 @@ function MultipleChoice({questionItem, index}) {
     }
 
     return (
-        <div className={Style.Main}>
+        <div key={index} className={Style.Main}>
             <p>{question}</p>
             <section className="questions">
                 <RadioGroup
                     {...{onChange}}
                     name={`question-${index}`}
-                    className="radio--group flex">
+                    className="radio--group flex"
+                    value={answer || ''}>
                     {options.map(({label, value}) => (
                         <FormControlLabel
                             key={`${index}-${value}`}

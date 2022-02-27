@@ -20,13 +20,7 @@ function ProgressWizard({content, doneTemplate}) {
     return (
         <div className={Style.Main}>
             <section className="content">
-                {[...content, doneTemplate].map((el, index) => (
-                    <div
-                        key={index}
-                        style={{display: index === activeStep ? 'block' : 'none'}}>
-                        {el}
-                    </div>
-                ))}
+                {activeStep === content.length ? doneTemplate : content[activeStep]
             </section>
             <MobileStepper
                 variant="progress"
