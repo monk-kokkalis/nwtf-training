@@ -7,7 +7,7 @@ import {
 } from '@mui/icons-material';
 
 function ProgressWizard({content, doneTemplate}) {
-    const [activeStep, setActiveStep] = useState(0);
+    const [activeStep, setActiveStep] = useState(10);
 
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -20,7 +20,7 @@ function ProgressWizard({content, doneTemplate}) {
     return (
         <div className={Style.Main}>
             <section className="content">
-                {activeStep === content.length ? doneTemplate : content[activeStep]
+                {activeStep === content.length ? doneTemplate : content[activeStep]}
             </section>
             <MobileStepper
                 variant="progress"

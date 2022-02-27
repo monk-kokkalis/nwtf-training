@@ -1,0 +1,39 @@
+.Main {
+    align-items: center;
+    display: flex;
+    position: relative;
+    height: 200px;
+    justify-content: center;
+    width: 200px;
+
+
+    div[class~=circular] {
+        position: absolute;
+    }
+
+    div[class~=foreground] {
+        z-index: 5;
+        svg {
+            stroke: green;
+        }
+    }
+
+    div[class~=value--description] {
+        div[class~=main] {
+            color: rgba(0, 0, 0, 0.9);
+            font-size: 44px;
+        }
+        div[class~=secondary] {
+            font-size: 16px;
+            margin-top: 3px;
+            text-align: center;
+        }
+    }
+
+    div[class~=background] {
+        z-index: 1;
+        svg {
+            color: #BDBDBD;
+        }
+    }
+}
