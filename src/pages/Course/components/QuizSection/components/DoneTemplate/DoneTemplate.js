@@ -1,5 +1,5 @@
-import Style from './DoneTemplate.module.scss';
 import {useContext} from 'react';
+import Style from './DoneTemplate.module.scss';
 import {Context} from '../../context/Provider';
 // elements
 import CircularDeterminate from 'elements/CircularDeterminate/CircularDeterminate';
@@ -25,7 +25,9 @@ function DoneTemplate() {
     return (
         <div className={Style.Main}>
             <section className="overview">
-                <CircularDeterminate value={percentage} color={color} subtitle={subtitle} />
+                <div className="circular--container">
+                    <CircularDeterminate value={percentage} color={color} subtitle={subtitle} />
+                </div>
                 <div className="data">
                     <div className="row">
                         <div className="key">Date</div>
