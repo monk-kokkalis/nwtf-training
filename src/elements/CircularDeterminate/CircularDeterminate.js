@@ -3,7 +3,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 function CircularDeterminate({value, color, subtitle}) {
     const variant = 'determinate';
-    const size = 200;
+    const size = 170;
     const thickness = 1.6;
     return (
         <div className={Style.Main}>
