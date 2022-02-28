@@ -47,7 +47,7 @@
     height: var(--calculated-height);
     position: relative;
 
-    @media(max-width: 767px) {
+    @media (max-width: 768px) {
         grid-template-columns: 100%;
     }
 }

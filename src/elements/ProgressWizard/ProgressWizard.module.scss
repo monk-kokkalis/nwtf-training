@@ -1,11 +1,16 @@
 .Main {
     display: grid;
-    grid-template-rows: auto 50px;
+    grid-template-rows: 1fr 50px;
     height: 100%;
     
     & > section[class~=content] {
         background-color: #fff;
         padding: 15px 25px;
+        overflow: auto;
+
+        @media (max-width: 767px) {
+            padding: 15px;
+        }
     }
 
     div[class~=MuiPaper-root] {

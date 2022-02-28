@@ -6,7 +6,7 @@ function CircularDeterminate({value, color, subtitle}) {
     const size = 170;
     const thickness = 1.6;
     return (
-        <div className={Style.Main}>
+        <div className={Style.Main} style={{minHeight: `${size}px`}}>
             <div className="foreground circular">
                 <CircularProgress {...{variant, size, thickness, value}} sx={{color}} />
             </div>

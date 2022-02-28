@@ -5,6 +5,10 @@
         align-items: center;
         display: flex;
         justify-content: space-between;
+        @media (max-width: 767px) {
+            flex-direction: column;
+            gap: 10px;
+        }
 
         div[class~=data] {
             border: 1px solid rgba(0, 0, 0, 0.15);
@@ -15,6 +19,11 @@
             min-height: 170px;
             min-width: 360px;
             padding: 30px;
+
+            @media (max-width: 767px) {
+                min-width: 100%;
+                padding: 30px 10px;
+            }
 
             div[class~=row] {
                 display: flex;
