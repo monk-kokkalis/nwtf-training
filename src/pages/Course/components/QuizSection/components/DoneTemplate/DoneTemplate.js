@@ -8,6 +8,7 @@ import Table from 'elements/Table/Table';
 import strftime from 'strftime';
 // hooks
 import useQuizResult from '../../hooks/use-quiz-result';
+import useTableConfig from './hooks/use-table-config';
 
 function DoneTemplate() {
     const context = useContext(Context);
@@ -21,6 +22,7 @@ function DoneTemplate() {
         color,
         subtitle
     } = quizResult;
+    const tableConfig = useTableConfig({quizState});
 
     return (
         <div className={Style.Main}>
@@ -49,7 +51,7 @@ function DoneTemplate() {
             </section>
             <div className="notice">Summary</div>
             <section className="table">
-                <Table />
+                <Table headers={tableConfig.headers} rows={tableConfig.rows} />
             </section>
         </div>
     )
