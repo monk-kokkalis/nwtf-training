@@ -2,17 +2,20 @@ import Style from './CircularDeterminate.module.scss';
 import CircularProgress from '@mui/material/CircularProgress';
 
 function CircularDeterminate({value, color, subtitle}) {
+    const variant = 'determinate';
+    const size = 200;
+    const thickness = 1.6;
     return (
         <div className={Style.Main}>
             <div className="foreground circular">
-                <CircularProgress variant="determinate" size={200} {...{value}} sx={{color}} />
+                <CircularProgress {...{variant, size, thickness, value}} sx={{color}} />
             </div>
             <div className="value--description">
                 <div className="main">{value}%</div>
                 <div className="secondary" style={{color}}>{subtitle}</div>
             </div>
             <div className="background circular">
-                <CircularProgress variant="determinate" size={200} value={100} />
+                <CircularProgress {...{variant, size, thickness}} value={100} />
             </div>
         </div>
     );

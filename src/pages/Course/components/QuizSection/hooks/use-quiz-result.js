@@ -3,14 +3,15 @@ function useQuizResult({quizState}) {
     const answered = `${answers.length}/${quiz.length}`;
     const passingScore = `${quiz.length * 0.8} (80%)`;
     const score = resolveScore({quiz, answers});
+    const {percentage, text} = score;
     
     return {
         answered,
         passingScore,
-        score: score.text,
-        percentage: score.percentage,
-        color: score.percentage >= 80 ? 'green' : 'red',
-        subtitle: score.percentage >= 80 ? 'Passed' : 'Failed'
+        score: text,
+        percentage: percentage,
+        color: percentage >= 80 ? 'green' : '#F44336',
+        subtitle: percentage === 100 ? 'Perfect!' : percentage >= 80 ? 'Passed' : 'Failed'
     }
 }
 
