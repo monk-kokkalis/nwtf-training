@@ -3,6 +3,7 @@ import {useContext} from 'react';
 import {Context} from '../../context/Provider';
 // elements
 import CircularDeterminate from 'elements/CircularDeterminate/CircularDeterminate';
+import Table from 'elements/Table/Table';
 // date formatting
 import strftime from 'strftime';
 // hooks
@@ -43,6 +44,10 @@ function DoneTemplate() {
                         <div className="value">{score}</div>
                     </div>
                 </div>
+            </section>
+            <div className="notice">Summary</div>
+            <section className="table">
+                <Table />
             </section>
         </div>
     )
