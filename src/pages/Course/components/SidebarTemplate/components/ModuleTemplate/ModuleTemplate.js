@@ -2,8 +2,13 @@ import {useContext} from 'react';
 import Button from 'elements/Button/Button';
 import Checkbox from '@mui/material/Checkbox';
 // videos
-import setupRouter from 'assets/video/setup-router.mp4';
-import networkCross from 'assets/video/network-cross.mp4';
+// // first module
+import setupRouter from 'assets/video/first-module/setup-router.mp4';
+import networkCross from 'assets/video/first-module/network-cross.mp4';
+import modemVsRouter from 'assets/video/first-module/modem-vs-router.mp4';
+import sslHttps from 'assets/video/first-module/ssl-https.mp4';
+import dnsServer from 'assets/video/first-module/dns-server.mp4';
+
 // context
 import {Context} from '../../../../context/Provider';
 import actions from '../../../../context/reducers/modules/actions';
@@ -44,6 +49,57 @@ function ModuleTemplate() {
                                 context.moduleDispatch({
                                     type: actions.UPDATE_CURRENT_VIDEO,
                                     payload: {video: networkCross}
+                                })
+                            }
+                        }
+                    />
+                </li>
+                <li>
+                    <Checkbox size="small" />
+                    <Button
+                        text="3. Modem vs Router"
+                        variant="text"
+                        fullWidth={true}
+                        clickHandler={
+                            () => {
+                                navigate('/course/video')
+                                context.moduleDispatch({
+                                    type: actions.UPDATE_CURRENT_VIDEO,
+                                    payload: {video: modemVsRouter}
+                                })
+                            }
+                        }
+                    />
+                </li>
+                <li>
+                    <Checkbox size="small" />
+                    <Button
+                        text="4. SSL, HTTPS"
+                        variant="text"
+                        fullWidth={true}
+                        clickHandler={
+                            () => {
+                                navigate('/course/video')
+                                context.moduleDispatch({
+                                    type: actions.UPDATE_CURRENT_VIDEO,
+                                    payload: {video: sslHttps}
+                                })
+                            }
+                        }
+                    />
+                </li>
+                <li>
+                    <Checkbox size="small" />
+                    <Button
+                        text="5. DNS server"
+                        variant="text"
+                        fullWidth={true}
+                        clickHandler={
+                            () => {
+                                navigate('/course/video')
+                                context.moduleDispatch({
+                                    type: actions.UPDATE_CURRENT_VIDEO,
+                                    payload: {video: dnsServer}
                                 })
                             }
                         }

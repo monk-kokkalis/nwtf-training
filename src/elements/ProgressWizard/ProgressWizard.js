@@ -9,7 +9,7 @@ import {
 import useContentHeight from './hooks/use-content-height';
 
 function ProgressWizard({content, doneTemplate}) {
-    const [activeStep, setActiveStep] = useState(10);
+    const [activeStep, setActiveStep] = useState(0);
     const stepperHeight = 50;
     const verticalPadding = 15;
     const mainRef = useRef();

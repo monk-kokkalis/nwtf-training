@@ -3,6 +3,7 @@ import Accordion from 'elements/Accordion/Accordion';
 // components
 import QuizTemplate from './components/QuizTemplate/QuizTemplate';
 import ModuleTemplate from './components/ModuleTemplate/ModuleTemplate';
+import SecondModuleTemplate from './components/SecondModuleTemplate/SecondModuleTemplate';
 // icons
 import {Article as ArticleIcon} from '@mui/icons-material';
 function SidebarTemplate() {
@@ -25,7 +26,7 @@ function SidebarTemplate() {
                 Course modules
             </h1>
             <Accordion summary="First Module Title" details={<ModuleTemplate />} />
-            <Accordion summary="Second Module" disabled={true} />
+            <Accordion summary="Second Module" details={<SecondModuleTemplate />} />
             <Accordion summary={quizzesSummary} details={<QuizTemplate />} />
         </div>
     )
